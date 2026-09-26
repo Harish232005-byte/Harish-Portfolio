@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0a1128;
+  --color-navy-800: #121e3d;
+  --color-navy-700: #1c2e5b;
+  --color-accent-blue: #2563eb;
+  --color-accent-indigo: #4f46e5;
+  --color-off-white: #f8fafc;
+  --color-light-gray: #e2e8f0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue to-accent-indigo;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-6 py-20 md:py-24;
+}
+
+.heading-lg {
+  @apply text-4xl md:text-5xl font-bold text-navy-900 mb-6;
+}
+
+.heading-md {
+  @apply text-3xl font-bold text-navy-900 mb-12 text-center;
+}
+
+.card {
+  @apply bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300;
+}
