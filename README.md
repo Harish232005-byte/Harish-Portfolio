@@ -1,16 +1,58 @@
-# React + Vite
+# Harish S - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Professional portfolio website for Harish S, an aspiring AI & Data Science Professional. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio showcases my education, technical skills, projects, and professional experience in the field of Artificial Intelligence and Data Science. 
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **Icons:** Lucide React
+- **Deployment:** Vercel / Netlify (Recommended)
 
-## Expanding the Oxlint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/harish-portfolio.git
+   cd harish-portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173` to view it in the browser.
+
+## 🏗️ Build for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
+```
+This will generate an optimized `dist/` folder ready for deployment.
+
+## 🌐 Deployment
+
+This project can be easily deployed to modern static hosting platforms like Vercel, Netlify, or GitHub Pages.
+
+For Vercel:
+1. Connect your GitHub repository to Vercel.
+2. The default build settings (`npm run build` and `dist` output) will automatically work.
+
+## ✉️ Contact
+
+- Email: kanishharish0@gmail.com
+- LinkedIn: [Harish S](https://www.linkedin.com/in/harish2005)
