@@ -5,8 +5,8 @@ export const portfolioData = {
     email: "kanishharish0@gmail.com",
     phone: "+91 9342771507",
     linkedin: "https://www.linkedin.com/in/harish2005",
-    github: "", 
-    location: "",
+    github: "https://github.com/Harish232005-byte", 
+    location: "Tamil Nadu, India",
     summary: "Aspiring Data Science professional pursuing an M.Sc. in Artificial Intelligence & Data Science with knowledge of Python, SQL, Data Analysis, Machine Learning, and Data Visualization. Gained practical experience through Python development and web-based projects, including API integration and data scraping. Seeking an opportunity to apply technical skills, develop industry experience, and contribute to data-driven solutions.",
     photo: "/profile.jpg",
     resume: "/resume.pdf"
@@ -14,27 +14,27 @@ export const portfolioData = {
   skills: [
     {
       category: "Machine Learning & AI",
-      items: ["Machine Learning", "Artificial Intelligence", "Data Preprocessing", "Predictive Analytics"]
+      items: ["Machine Learning", "Artificial Intelligence", "Data Preprocessing", "Predictive Analytics", "Natural Language Processing (NLP)", "Computer Vision (OpenCV)", "XGBoost", "Random Forest"]
     },
     {
       category: "Programming Languages",
-      items: ["Python", "SQL"]
+      items: ["Python", "SQL", "JavaScript"]
     },
     {
       category: "Data Science & Analytics",
-      items: ["Data Analysis", "Exploratory Data Analysis", "Statistical Analysis"]
+      items: ["Data Analysis", "Exploratory Data Analysis", "Statistical Analysis", "Time Series Forecasting (ARIMA)", "Inventory Optimization"]
     },
     {
       category: "Data Visualization",
-      items: ["Power BI", "Tableau", "Matplotlib"]
+      items: ["Power BI", "Tableau", "Matplotlib", "Plotly"]
     },
     {
       category: "Databases",
-      items: ["SQL", "Database Management"]
+      items: ["SQL", "Database Management", "MySQL"]
     },
     {
-      category: "Tools & Technologies",
-      items: ["Jupyter Notebook", "MySQL", "Microsoft Excel"]
+      category: "Tools & Frameworks",
+      items: ["Streamlit", "Flask", "Django REST Framework", "React.js", "Jupyter Notebook", "Git & GitHub", "Microsoft Excel"]
     },
     {
       category: "Soft Skills",
@@ -79,8 +79,51 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "Verity: News Credibility & Misinformation Analyzer",
+      category: "NLP & Explainable AI",
+      description: "An end-to-end NLP web platform engineered to critically assess the veracity and journalistic integrity of news stories, public claims, and web articles.",
+      techStack: ["Python", "Flask REST API", "Scikit-learn", "TF-IDF", "NLTK", "VADER", "BeautifulSoup"],
+      githubUrl: "https://github.com/Harish232005-byte/VERITY-NEWS-CREDIBILTY-AND-MISINFORMATION",
+      featured: true,
+      points: [
+        "Engineered an NLP model achieving 98.1% accuracy and F1-score across 10,160 ISOT news articles.",
+        "Built automated article scraping with stylometric profiling and Flesch reading ease scoring.",
+        "Integrated Explainable AI (XAI) token-level attribution to visualize manipulative cues, credibility scores, and sentiment distribution."
+      ]
+    },
+    {
+      title: "Supply Chain Demand Forecasting — MLOps Platform",
+      category: "MLOps & Inventory Optimization",
+      description: "Enterprise-grade MLOps platform and Streamlit analytics suite for predictive multi-echelon demand dynamics and inventory optimization.",
+      techStack: ["Python", "Streamlit", "XGBoost", "Random Forest", "ARIMA", "Plotly", "Pandas"],
+      githubUrl: "https://github.com/Harish232005-byte/SUPPLY-CHAIN-DEMAND-FORECASTING",
+      featured: true,
+      points: [
+        "Developed a tri-algorithm predictive architecture combining XGBoost Regressor, Random Forest, and ARIMA time series.",
+        "Implemented supply chain intelligence computing dynamic Safety Stock (SS), Reorder Point (ROP), and Economic Order Quantity (EOQ).",
+        "Created 12 dynamic visual analytics graphs and a benchmark leaderboard tracking MAE, RMSE, MAPE, WAPE, and R² scores."
+      ]
+    },
+    {
+      title: "Edge-Based Object Boundary Detection",
+      category: "Computer Vision & Image Processing",
+      description: "An advanced, interactive web application for automated edge detection, shape representation, and object boundary extraction using OpenCV.",
+      techStack: ["Python", "OpenCV", "Flask", "JavaScript", "HTML5 Canvas", "CSS3"],
+      githubUrl: "https://github.com/Harish232005-byte/OBJECT-EDGE-DETECTION",
+      featured: true,
+      points: [
+        "Built a 4-step computer vision pipeline for grayscale smoothing, Sobel/Canny edge detection, and morphological contour extraction.",
+        "Extracted geometric shape metrics: Douglas-Peucker polygonal approximation, compactness/circularity, centroids, and bounding boxes.",
+        "Engineered an interactive web UI supporting image uploads, live webcam feed, visual comparison overlays, and CSV report export."
+      ]
+    },
+    {
       title: "Keyword-Based Web Data Scraper and Insight Generator",
+      category: "Full-Stack & Web Scraping",
+      description: "A web-based application to scrape and collect relevant data based on user-provided keywords with backend API integration.",
       techStack: ["Python", "Django REST Framework", "React.js", "API Integration"],
+      githubUrl: "",
+      featured: false,
       points: [
         "Developed a web-based application to scrape and collect relevant data based on user-provided keywords.",
         "Built backend APIs using Django REST Framework and integrated them with the React.js frontend."
@@ -88,7 +131,11 @@ export const portfolioData = {
     },
     {
       title: "Fish Tank Monitoring System",
+      category: "IoT & Analytics",
+      description: "An IoT-based monitoring system collecting real-time sensor data to track aquatic conditions and improve fish tank management.",
       techStack: ["IoT", "Sensors", "Python", "Data Analysis"],
+      githubUrl: "",
+      featured: false,
       points: [
         "Developed an IoT-based system for monitoring fish tank conditions.",
         "Collected sensor data and used monitoring techniques to track tank conditions.",
@@ -97,7 +144,11 @@ export const portfolioData = {
     },
     {
       title: "Search Engine Using Data Warehousing",
+      category: "Data Warehousing & ETL",
+      description: "A search-oriented system applying ETL processes for structured extraction, transformation, and efficient query analysis.",
       techStack: ["Python", "Data Warehousing", "ETL", "Data Analysis"],
+      githubUrl: "",
+      featured: false,
       points: [
         "Developed a search-oriented system using data warehousing concepts.",
         "Applied ETL processes for data extraction, transformation, and loading.",
@@ -123,7 +174,7 @@ export const portfolioData = {
       ]
     },
     {
-      name: "AI International Conference \u2013 Certificate",
+      name: "AI International Conference – Certificate",
       issuer: "AI Conference",
       points: [
         "Participated in an international conference focused on Artificial Intelligence.",

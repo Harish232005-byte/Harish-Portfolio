@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, FileText } from 'lucide-react';
+import { Menu, X, FileText, Code2 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-6">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -42,23 +42,39 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          {portfolioData.personal.resume && (
-            <a 
-              href={portfolioData.personal.resume} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-navy-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent-blue transition-colors"
-            >
-              <FileText size={16} />
-              View Resume
-            </a>
-          )}
+          
+          <div className="flex items-center gap-3">
+            {portfolioData.personal.github && (
+              <a
+                href={portfolioData.personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-slate-600 hover:text-navy-900 px-3 py-2 rounded-full text-sm font-medium border border-slate-200 hover:border-slate-300 transition-colors"
+                title="GitHub Profile"
+              >
+                <Code2 size={16} />
+                <span>GitHub</span>
+              </a>
+            )}
+            {portfolioData.personal.resume && (
+              <a 
+                href={portfolioData.personal.resume} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-navy-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent-blue transition-colors"
+              >
+                <FileText size={16} />
+                View Resume
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Mobile Nav Toggle */}
         <button 
           className="md:hidden text-slate-800"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -66,28 +82,41 @@ export default function Navbar() {
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-slate-100 py-4 px-6 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-slate-100 py-4 px-6 flex flex-col gap-3">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-base font-medium text-slate-700 block py-2"
+              className="text-base font-medium text-slate-700 block py-1.5"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          {portfolioData.personal.resume && (
-             <a 
-              href={portfolioData.personal.resume} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-navy-900 text-white px-5 py-3 rounded-lg text-sm font-medium mt-2"
-            >
-              <FileText size={16} />
-              View Resume
-            </a>
-          )}
+          <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+            {portfolioData.personal.github && (
+              <a
+                href={portfolioData.personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border border-slate-200 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-medium"
+              >
+                <Code2 size={16} />
+                GitHub Profile
+              </a>
+            )}
+            {portfolioData.personal.resume && (
+              <a 
+                href={portfolioData.personal.resume} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-navy-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium"
+              >
+                <FileText size={16} />
+                View Resume
+              </a>
+            )}
+          </div>
         </div>
       )}
     </nav>
